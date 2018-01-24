@@ -1,8 +1,13 @@
 import React from 'react';
 import './cart.css';
 
-export const AddToCartButton = (props) => {
+export class AddToCartButton extends React.Component {
+    constructor(props) {
+      super(props);
+    }
+    render() {
     return(
-        <button class="addtocart" disabled={props.quantity === 0} >{props.quantity ?  'Add to cart' : 'Sold Out' }</button>
+        <button class="addtocart" onClick={this.props.clickbutton} disabled={this.props.quantity === 0} >{this.props.quantity ?  'Add to card' : 'Sold Out' }</button>
     )
+}
 };

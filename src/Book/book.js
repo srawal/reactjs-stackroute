@@ -3,8 +3,10 @@ import './book.css';
 import {AddToCartButton} from './cartButton/cart.js';
 
 export class Book extends React.Component{
-    render(){
-        var BookDetails = [
+    constructor(props){
+        super(props)
+        this.state = {
+            BookDetails : [
             {
                 title:"The Immortals of Meluha",
                 author:"Amish Tripathi",
@@ -34,9 +36,15 @@ export class Book extends React.Component{
                 quantity:3
 
             }
-        ];
+        ]}
+    }
+    cartButton(){
+        console.log('hi')
+    }
+    render(){
+        
       
-       const listItems = BookDetails.map((book,info) =>
+       const listItems = this.state.BookDetails.map((book,info) =>
        
         <div class="book-list">
             <h2 key={book.title}>Title : {book.title}</h2> 
@@ -45,7 +53,7 @@ export class Book extends React.Component{
             <p key={book.yearofpublish}>Year of Publish : {book.yearofpublish}</p> 
             <p key={book.price}>Price: {book.price}</p> 
             <p key={book.quantity}  >Quantity: {book.quantity}</p> 
-            <AddToCartButton quantity={book.quantity}></AddToCartButton>
+            <AddToCartButton clickbutton={this.cartButton} quantity={book.quantity}></AddToCartButton>
         </div>
        
     );
