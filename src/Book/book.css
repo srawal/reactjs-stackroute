@@ -1,0 +1,14 @@
+.book-list {
+    float: left;
+    width: 258px;
+    border: 1px solid #e2e2e2;
+    margin: 10px;
+    padding: 10px;
+
+}
+.book-details {
+    margin:0 auto;
+    width: 900px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}

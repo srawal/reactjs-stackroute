@@ -1,0 +1,14 @@
+.addtocart{
+    width:100%;
+    padding: 10px;
+    background: #fd6092;
+    color:#fff;
+    font-size: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.addtocart:disabled {
+    background:#e3e3e3;
+    cursor:default;
+}
